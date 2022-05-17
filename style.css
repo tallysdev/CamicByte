@@ -1,0 +1,9 @@
+body{
+    position: absolute;
+    margin: auto;
+    align-items: center;
+}
+
+.video{
+    justify-content: center;
+}
