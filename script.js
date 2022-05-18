@@ -12,3 +12,21 @@ async function initCamera(){
         })
     }
 }
+
+
+const audio = document.querySelector('#audio');
+
+async function initMicrofone(){    
+    if('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices){
+        navigator.mediaDevices.getUserMedia({audio: true})
+        .then((mediaStream) => {
+            audio.srcObject = mediaStream;
+        })
+        .catch((err) => {
+            alert("Permissão negada!");
+        })
+    }
+}
+
+
+
