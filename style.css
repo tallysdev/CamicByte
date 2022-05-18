@@ -1,7 +1,18 @@
 body{
-    position: absolute;
-    margin: auto;
-    align-items: center;
+    font-family: 'Akshar', 'Roboto', 'Comic Sans MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.navbar{
+    width: auto;
+    height: 40px;
+    padding: 15px;
+    padding-top: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: #DDDDDD;
 }
 
 .video{
