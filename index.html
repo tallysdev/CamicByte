@@ -13,10 +13,10 @@
 </head>
 <body>
     <section class="navbar"><nav id="navbar">BYTE</nav></section>
-    <div class="video"><video autoplay id="video"></video></div>
-    <button onclick="initCamera()">Acessar câmera</button>
-    <div class="audio"><audio id="audio"></audio></div>
-    <button onclick="initMicrofone()">Acessar Microfone</button>
+    <div class="botoes"><div class="video"><video autoplay id="video"></video></div>
+    <button onclick="initCamera()" class="botao" id="botVideo">Acessar câmera</button><button onclick="initMicrofone()" class="botao" id="botMic">Acessar Microfone</button>
+    <audio autoplay id="audio"></audio>
+    </div>
     <!-- <button onclick="() => audio.play()">Ouvir MIcrifone</button> -->
 
     <script src="./script.js"></script>
