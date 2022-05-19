@@ -14,7 +14,7 @@ async function initCamera(){
 }
 
 const audio = document.querySelector('#audio');
-var media;
+var media = null;
 
 async function initMicrofone(){    
     if('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices){
@@ -30,8 +30,7 @@ async function initMicrofone(){
 }
 
 function ouvirMic(){
-    audio.srcObject = media;
-    
+        audio.srcObject = media;
 }
 
 function pararMic(){

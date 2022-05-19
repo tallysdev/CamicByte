@@ -14,20 +14,21 @@
     <body>
         <section class="navbar">
             <nav id="navbar">
-
                 <img class="logo" src="logo.png" alt="">
-                
             </nav>
         </section>
-
-        <div class="botoes"><div class="video"><video autoplay id="video"></video></div>
-        <button onclick="initCamera()" class="botao" id="botVideo">Acessar câmera</button>
-        <button onclick="initMicrofone()" class="botao" id="botMic">Acessar Microfone</button>
-        <audio autoplay id="audio"></audio>
-        <button onclick="ouvirMic()" class="botao" id="ouvirbotao">Ouvir MIcrifone</button>
-        <button onclick="pararMic()" class="botao" id="pararbotao">Deixar de ouvir Microfone</button>
-        </div>
-
+        <main id="main-content">
+            <div class="botoes">
+                <div class="audio-video">
+                    <video autoplay id="video"></video>
+                    <audio autoplay id="audio"></audio>
+                </div>
+                <button onclick="initCamera()" class="botao" id="botVideo">Acessar câmera</button>
+                <button onclick="initMicrofone()" class="botao" id="botMic">Acessar microfone</button>
+                <button onclick="ouvirMic()" class="botao" id="ouvirbotao">Ouvir microfone</button>
+                <button onclick="pararMic()" class="botao" id="pararbotao">Deixar de ouvir microfone</button>
+            </div>
+        </main>
         
         <script src="./script.js"></script>        
     </body>
