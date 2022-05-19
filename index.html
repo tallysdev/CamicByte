@@ -14,11 +14,18 @@
 <body>
     <section class="navbar"><nav id="navbar">BYTE</nav></section>
     <div class="botoes"><div class="video"><video autoplay id="video"></video></div>
-    <button onclick="initCamera()" class="botao" id="botVideo">Acessar câmera</button><button onclick="initMicrofone()" class="botao" id="botMic">Acessar Microfone</button>
+    <button onclick="initCamera()" class="botao" id="botVideo">Acessar câmera</button>
+    <button onclick="initMicrofone()" class="botao" id="botMic">Acessar Microfone</button>
     <audio autoplay id="audio"></audio>
-    </div>
-    <!-- <button onclick="() => audio.play()">Ouvir MIcrifone</button> -->
+    <button onclick="ouvirMic()" class="botao" id="ouvirbotao">Ouvir MIcrifone</button>
+    <button onclick="pararMic()" class="botao" id="pararbotao">Deixar de ouvir MIcrifone</button>
 
+    <!-- <button onclick="initMicrofone()" class="botao" id="ouvir">Acessar Microfone</button> -->
+    <!-- <button onclick="initMicrofone()" class="botao" id="botMic"><audio autoplay id="audio"></audio>aaaa</button> -->
+    <!-- <button><audio autoplay id="audio"></audio>autoplay ouvir</button> -->
+    </div>
+    
+    <!-- <p id="output"></p> -->
     <script src="./script.js"></script>
 </body>
 </html>

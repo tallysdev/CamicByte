@@ -15,18 +15,26 @@ async function initCamera(){
 
 
 const audio = document.querySelector('#audio');
+var media;
 
 async function initMicrofone(){    
     if('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices){
         navigator.mediaDevices.getUserMedia({audio: true})
         .then((mediaStream) => {
-            audio.srcObject = mediaStream;
+            media = mediaStream;
+            
         })
         .catch((err) => {
-            alert("Permissão negada!");
+            alert(err);
         })
     }
 }
 
-
-
+function ouvirMic(){
+    audio.srcObject = media;
+    
+}
+function pararMic(){
+    audio.srcObject = null;
+}
+    
