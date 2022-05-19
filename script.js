@@ -13,7 +13,6 @@ async function initCamera(){
     }
 }
 
-
 const audio = document.querySelector('#audio');
 var media;
 
@@ -34,6 +33,7 @@ function ouvirMic(){
     audio.srcObject = media;
     
 }
+
 function pararMic(){
     audio.srcObject = null;
 }
