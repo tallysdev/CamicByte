@@ -18,13 +18,15 @@
             </nav>
         </section>
         <main id="main-content">
-            <div class="botoes">
-                <div class="audio-video">
-                    <video autoplay id="video"></video>
-                    <audio autoplay id="audio"></audio>
-                </div>
+            <div class="botoes-left">
                 <button onclick="initCamera()" class="botao" id="botVideo">Acessar câmera</button>
                 <button onclick="initMicrofone()" class="botao" id="botMic">Acessar microfone</button>
+            </div>
+            <div class="audio-video">
+                <video autoplay id="video"></video>
+                <audio autoplay id="audio"></audio>
+            </div> 
+            <div class="botoes-right">
                 <button onclick="ouvirMic()" class="botao" id="ouvirbotao">Ouvir microfone</button>
                 <button onclick="pararMic()" class="botao" id="pararbotao">Deixar de ouvir microfone</button>
             </div>
