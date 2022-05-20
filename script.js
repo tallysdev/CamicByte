@@ -30,7 +30,11 @@ async function initMicrofone(){
 }
 
 function ouvirMic(){
+    if(!media){
+        alert("Primeiro clique em \"Acessar microfone\" para poder ouvir!");
+    }else{
         audio.srcObject = media;
+    }
 }
 
 function pararMic(){
