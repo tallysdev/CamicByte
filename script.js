@@ -13,6 +13,10 @@ async function initCamera(){
     }
 }
 
+function pararCamera(){
+    video.srcObject = null
+}
+
 const audio = document.querySelector('#audio');
 var media = null;
 
