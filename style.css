@@ -3,7 +3,8 @@ body{
     margin: 0;
     padding: 0;
     justify-content: center;
-    background-color: rgb(28, 129, 201);
+    /* background-color: rgb(28, 129, 201); */
+    background-color:  rgb(0, 94, 255);;
 }
 
 .navbar{
@@ -63,5 +64,17 @@ body{
 #contatos{
     position: relative;
     display: inline-block;
-    margin-left: 80%;
+    margin-left: 85%;
+}
+
+a {
+    text-decoration: none;
+    padding: 15px;
+}
+a:link,:visited {
+    color: rgb(0, 94, 255);
+}
+
+a:hover{
+    color: rgb(191, 181, 0);
 }
