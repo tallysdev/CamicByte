@@ -18,28 +18,28 @@ function pararCamera(){
 }
 
 const audio = document.querySelector('#audio');
-var media = null;
+// var media = null;
 
 async function initMicrofone(){    
     if('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices){
         navigator.mediaDevices.getUserMedia({audio: true})
         .then((mediaStream) => {
-            media = mediaStream;
-            
+            // media = mediaStream;
+            audio.srcObject = mediaStream;
         })
         .catch((err) => {
-            alert(err);
+            alert("Permissão negada!");
         })
     }
 }
 
-function ouvirMic(){
-    if(!media){
-        alert("Primeiro clique em \"Acessar microfone\" para poder ouvir!");
-    }else{
-        audio.srcObject = media;
-    }
-}
+// function ouvirMic(){
+//     if(!media){
+//         alert("Primeiro clique em \"Acessar microfone\" para poder ouvir!");
+//     }else{
+//         audio.srcObject = media;
+//     }
+// }
 
 function pararMic(){
     audio.srcObject = null;
