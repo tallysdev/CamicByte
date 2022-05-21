@@ -18,8 +18,6 @@ function pararCamera(){
 }
 
 const audio = document.querySelector('#audio');
-// var media = null;
-
 async function initMicrofone(){    
     if('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices){
         navigator.mediaDevices.getUserMedia({audio: true})
@@ -32,14 +30,6 @@ async function initMicrofone(){
         })
     }
 }
-
-// function ouvirMic(){
-//     if(!media){
-//         alert("Primeiro clique em \"Acessar microfone\" para poder ouvir!");
-//     }else{
-//         audio.srcObject = media;
-//     }
-// }
 
 function pararMic(){
     audio.srcObject = null;
