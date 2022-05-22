@@ -35,21 +35,23 @@ body{
     width: auto;
     grid-area: botoes-left;
     text-align: center;
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    position: absolute;
+    left: 20%;
+    bottom: 5%;
+
+
 }
 
 .botoes-right{
     width: auto;
     grid-area: botoes-right;
     text-align: center;
-    margin-top: 50px;
-}
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
 
-.botao{
-    width: 180px;
-    height: 30px;
-    margin: 15px;
-    margin-top: 100px;
+    
 }
 
 .logo{
@@ -74,6 +76,18 @@ a:link,:visited {
 
 a:hover{
     color: rgb(191, 181, 0);
+}
+
+.block-camera {
+    background-color: #fff;
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    margin: 2%;
+    left: 5%;
+    bottom: 20%;
+
+
 }
 
 .onoff input.toggle {
