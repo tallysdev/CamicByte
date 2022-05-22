@@ -76,3 +76,49 @@ a:link,:visited {
 a:hover{
     color: rgb(191, 181, 0);
 }
+
+.onoff input.toggle {
+    display: none;
+}
+
+.onoff input.toggle + label {
+    display: inline-block;
+    position: relative;
+    box-shadow: inset 0 0 0px 1px #d5d5d5;
+    height: 60px;
+    width: 100px;
+    border-radius: 30px;
+}
+
+.onoff input.toggle + label:before {
+    content: "";
+    display: block;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    background: rgba(19, 191, 17, 0);
+    transition: 0.1s ease-in-out;
+}
+
+.onoff input.toggle + label:after {
+    content: "";
+    position: absolute;
+    height: 60px;
+    width: 60px;
+    top: 0;
+    left: 0px;
+    border-radius: 30px;
+    background: #fff;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: 0.1s ease-in-out;
+}
+
+.onoff input.toggle:checked + label:before {
+    width: 100px;
+    background: #13bf11;
+}
+
+.onoff input.toggle:checked + label:after {
+    left: 40px;
+    box-shadow: inset 0 0 0 1px #13bf11, 0 2px 4px rgba(0, 0, 0, 0.2);
+}

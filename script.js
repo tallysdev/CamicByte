@@ -31,6 +31,21 @@ async function initMicrofone(){
     }
 }
 
+var onoff = document.getElementById('onoff1');
+var estado = document.getElementById('estado');
+
+function Camera(){
+    onoff.addEventListener('change', function() {
+        estado.innerHTML = this.checked ? 'Ligado' : 'Desligado';
+        if(estado.innerHTML == 'Ligado'){
+            initCamera();
+        }
+        else if (estado.innerHTML == 'Desligado' ) {
+            pararCamera();
+        }
+    })
+}
+
 function pararMic(){
     audio.srcObject = null;
 }

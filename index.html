@@ -9,7 +9,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Akshar&display=swap" rel="stylesheet">
-        <title>Teste de Câmera</title>
+        <title>Cam Byte</title>
     </head>
     <body>
         <section class="navbar">
@@ -32,10 +32,14 @@
             </div> 
             <div class="botoes-right">
                 <button onclick="initMicrofone()" class="botao" id="botMic">Acessar microfone</button>
-                <!-- <button onclick="ouvirMic()" class="botao" id="ouvirbotao">Ouvir microfone</button> -->
                 <button onclick="pararMic()" class="botao" id="pararbotao">Deixar de ouvir microfone</button>
             </div>
 
+            <div class="onoff">
+                <input onclick="Camera()" type="checkbox" class="toggle" id="onoff1">
+                <label for="onoff1"></label>
+            </div>
+            
         </main>
         
         <script src="./script.js"></script>        
