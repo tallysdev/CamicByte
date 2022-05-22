@@ -31,6 +31,18 @@ body{
     grid-area: audio-video;
 }
 
+.block-camera {
+    background-color: #fff;
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    margin: 2%;
+    left: 5%;
+    bottom: 20%;
+
+
+}
+
 .botoes-left{
     width: auto;
     grid-area: botoes-left;
@@ -43,13 +55,25 @@ body{
 
 }
 
+.block-audio {
+    background-image: url(verde.png);
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    margin: 2%;
+    right: 5%;
+    bottom: 20%;
+
+
+}
+
 .botoes-right{
     width: auto;
     grid-area: botoes-right;
     text-align: center;
     position: absolute;
-    right: 10%;
-    bottom: 10%;
+    right: 20%;
+    bottom: 5%;
 
     
 }
@@ -78,17 +102,7 @@ a:hover{
     color: rgb(191, 181, 0);
 }
 
-.block-camera {
-    background-color: #fff;
-    position: absolute;
-    width: 500px;
-    height: 400px;
-    margin: 2%;
-    left: 5%;
-    bottom: 20%;
 
-
-}
 
 .onoff input.toggle {
     display: none;
