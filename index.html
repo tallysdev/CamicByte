@@ -23,22 +23,29 @@
         </section>
         <main id="main-content">
             <div class="botoes-left">
-                <button onclick="initCamera()" class="botao" id="botVideo">Acessar câmera</button>
-                <button onclick="pararCamera()" class="botao" id="botVideo">Fechar câmera</button>
+                <!-- <button onclick="initCamera()" class="botao" id="botVideo">Acessar câmera</button>
+                <button onclick="pararCamera()" class="botao" id="botVideo">Fechar câmera</button> -->
+                <div class="onoff">
+                    <input type="checkbox" class="toggle" id="onoff1">
+                    <label for="onoff1"></label>
+                </div>
+                <p id="estado">desligado</p>
             </div>
             <div class="audio-video">
                 <video autoplay id="video"></video>
                 <audio autoplay id="audio"></audio>
             </div> 
             <div class="botoes-right">
-                <button onclick="initMicrofone()" class="botao" id="botMic">Acessar microfone</button>
-                <button onclick="pararMic()" class="botao" id="pararbotao">Deixar de ouvir microfone</button>
+                <!-- <button onclick="initMicrofone()" class="botao" id="botMic">Acessar microfone</button>
+                <button onclick="pararMic()" class="botao" id="pararbotao">Deixar de ouvir microfone</button> -->
+                <div class="onoff">
+                    <input type="checkbox" class="toggle" id="onoffmic">
+                    <label for="onoffmic"></label>
+                </div>
+                <p id="estadomic">desligado</p>
             </div>
 
-            <div class="onoff">
-                <input onclick="Camera()" type="checkbox" class="toggle" id="onoff1">
-                <label for="onoff1"></label>
-            </div>
+            
             
         </main>
         

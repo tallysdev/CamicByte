@@ -115,10 +115,15 @@ a:hover{
 
 .onoff input.toggle:checked + label:before {
     width: 100px;
-    background: #13bf11;
+    background: #fff;
 }
 
 .onoff input.toggle:checked + label:after {
     left: 40px;
-    box-shadow: inset 0 0 0 1px #13bf11, 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0 0 0 3px rgb(0, 94, 255), 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    color: #fff;
+    text-align: center;
 }

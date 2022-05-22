@@ -30,23 +30,35 @@ async function initMicrofone(){
         })
     }
 }
-
-var onoff = document.getElementById('onoff1');
-var estado = document.getElementById('estado');
-
-function Camera(){
-    onoff.addEventListener('change', function() {
-        estado.innerHTML = this.checked ? 'Ligado' : 'Desligado';
-        if(estado.innerHTML == 'Ligado'){
-            initCamera();
-        }
-        else if (estado.innerHTML == 'Desligado' ) {
-            pararCamera();
-        }
-    })
-}
-
 function pararMic(){
     audio.srcObject = null;
 }
     
+
+var onoff = document.getElementById('onoff1');
+var estado = document.getElementById('estado');
+
+onoff.addEventListener('change', function() {
+    estado.innerHTML = this.checked ? 'Ligar' : 'Desligar';
+    if (estado.innerHTML=='Ligar') {
+        initCamera();
+    }
+    else if (estado.innerHTML=='Desligar') {
+        pararCamera();
+    }
+});
+
+var onoffmic = document.getElementById('onoffmic');
+var estadomic = document.getElementById('estadomic');
+
+onoffmic.addEventListener('change', function() {
+    estadomic.innerHTML = this.checked ? 'Ligar' : 'Desligar';
+    if (estadomic.innerHTML=='Ligar') {
+        initMicrofone();
+    }
+    else if (estadomic.innerHTML=='Desligar') {
+        pararMic();
+    }
+});
+
+
