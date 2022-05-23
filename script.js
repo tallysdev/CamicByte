@@ -67,11 +67,11 @@ onoffmic.addEventListener('change', function() {
     estadomic.innerHTML = this.checked ? 'Ligar' : 'Desligar';
     if (estadomic.innerHTML=='Ligar') {
         initMicrofone();
-        imgmic[0].style.backgroundImage = "url(aberto.png)";
+        imgmic[0].style.backgroundImage = "url(mic-aberto.png)";
     }
     else if (estadomic.innerHTML=='Desligar') {
         pararMic();
-        imgmic[0].style.backgroundImage = "url(fechado.png)";
+        imgmic[0].style.backgroundImage = "url(mic-fechado.png)";
     }
 });
 

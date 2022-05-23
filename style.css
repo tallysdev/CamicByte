@@ -59,7 +59,7 @@ body{
 }
 
 .block-audio {
-    background-image:url(fechado.png);
+    background-image:url(mic-fechado.png);
     background-repeat: no-repeat;
     width: 300px;
     position: absolute;
