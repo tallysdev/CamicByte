@@ -34,6 +34,7 @@ body{
 
 
 } 
+
 .block-cam-png {
     background-image:url(camera\ -\ Copia.png);
     background-repeat: no-repeat;
@@ -66,8 +67,6 @@ body{
     margin: 2%;
     right: 10%;
     bottom: 25%;
-
-
 }
 
 .botoes-right{
@@ -76,9 +75,7 @@ body{
     text-align: center;
     position: absolute;
     right: 20%;
-    bottom: 5%;
-
-    
+    bottom: 5%;    
 }
 
 .logo{
@@ -87,16 +84,101 @@ body{
     width: 80px;
 }
 
+#sobre{
+    position: relative;
+    display: block;
+    right: 0px;
+    float: right;
+    background-color: rgba(0, 0, 0, 0);
+    color:rgb(0, 94, 255);
+    font-size: 25px;
+    font-weight: 600;
+    border: none;
+    font-family: 'Akshar', 'Roboto', 'Comic Sans MS', sans-serif;
+}
+
+#sobre:hover{
+    color: rgb(191, 181, 0);
+}
+
+.sobre{
+    position: relative;
+    top: -10px;
+    display: block;
+    padding: 10px;
+    padding-bottom: 20px;
+    float: right;
+}
+
+.sobre:hover{
+    background-color: #CCCCCC;
+}
+
+.sobre:hover #sobre-content{
+    display: block;
+}
+
+#sobre-content{
+    display: none;
+    position: absolute;
+    right: 0px;
+    width: 200px;
+    background-color: #CCCCCC;
+    padding: 10px;
+    z-index: 1;
+    margin-top: 35px;
+    width: 300px;
+}
+
+#sobre-content p {
+    color: rgb(0, 94, 255);
+}
+
 #contatos{
     position: relative;
-    display: inline-block;
-    margin-left: 85%;
+    top: -10px;
+    display: block;
+    padding: 10px;
+    padding-bottom: 20px;
+    float: right;
+}
+
+#cttBtn{
+    background-color: rgba(0, 0, 0, 0);
+    color:rgb(0, 94, 255);
+    font-size: 25px;
+    font-weight: 600;
+    border: none;
+    font-family: 'Akshar', 'Roboto', 'Comic Sans MS', sans-serif;
+}
+
+#cttBtn:hover{
+    color: rgb(191, 181, 0);
+}
+
+#contatos-content{
+    display: none;
+    position: absolute;
+    right: 0px;
+    width: 200px;
+    background-color: #CCCCCC;
+    padding: 15px;
+    z-index: 1;
+}
+
+#contatos:hover{
+    background-color: #CCCCCC;
+}
+
+#contatos:hover #contatos-content{
+    display: block;
 }
 
 a {
     text-decoration: none;
     padding: 15px;
 }
+
 a:link,:visited {
     color: rgb(0, 94, 255);
 }
@@ -104,8 +186,6 @@ a:link,:visited {
 a:hover{
     color: rgb(191, 181, 0);
 }
-
-
 
 .onoff input.toggle {
     display: none;

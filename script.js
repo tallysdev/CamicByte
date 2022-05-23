@@ -1,7 +1,7 @@
-// deficindo vareavel video
+// Definindo variável video
 const video = document.querySelector('#video');
 
-// função de iniciar Camera
+// Função de iniciar Camera
 async function initCamera(){    
     if('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices){
         navigator.mediaDevices.getUserMedia({video: true})
@@ -14,13 +14,14 @@ async function initCamera(){
     }
 }
 
-// função de parar camera passando video como null
+// Função de parar câmera (torna o source do video null)
 function pararCamera(){
     video.srcObject = null
 }
 
-// definindo varialvel
+// definindo variável do áudio
 const audio = document.querySelector('#audio');
+
 // função de iniciar microfone
 async function initMicrofone(){    
     if('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices){
@@ -58,6 +59,7 @@ onoff.addEventListener('change', function() {
 // iniciando e definindo vareiaveis do segundo botão toggle
 var onoffmic = document.getElementById('onoffmic');
 var estadomic = document.getElementById('estadomic');
+const imgmic = document.getElementsByClassName("block-audio");
 
 // função do segundo botao toggle que é o de mic
 onoffmic.addEventListener('change', function() {
@@ -65,9 +67,11 @@ onoffmic.addEventListener('change', function() {
     estadomic.innerHTML = this.checked ? 'Ligar' : 'Desligar';
     if (estadomic.innerHTML=='Ligar') {
         initMicrofone();
+        imgmic[0].style.backgroundImage = "url(aberto.png)";
     }
     else if (estadomic.innerHTML=='Desligar') {
         pararMic();
+        imgmic[0].style.backgroundImage = "url(fechado.png)";
     }
 });
 
