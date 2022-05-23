@@ -24,15 +24,7 @@ body{
         "botoes-left audio-video audio-video botoes-right";
 }
 
-.audio-video{
-    width: auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    grid-area: audio-video;
-}
-
 .block-camera {
-    background-color: #fff;
     position: absolute;
     width: 500px;
     height: 400px;
@@ -41,13 +33,23 @@ body{
     bottom: 20%;
 
 
+} 
+.block-cam-png {
+    background-image:url(camera\ -\ Copia.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 500px;
+    height: 400px;
+    margin: 2%;
+    left: 15%;
+    bottom: 12%;
 }
 
 .botoes-left{
     width: auto;
     grid-area: botoes-left;
     text-align: center;
-    /* margin-top: 50px; */
+    margin-top: 50px;
     position: absolute;
     left: 20%;
     bottom: 5%;
@@ -56,13 +58,14 @@ body{
 }
 
 .block-audio {
-    background-image: url(verde.png);
+    background-image:url(fechado.png);
+    background-repeat: no-repeat;
+    width: 300px;
     position: absolute;
-    width: 500px;
-    height: 400px;
+    height: 300px;
     margin: 2%;
-    right: 5%;
-    bottom: 20%;
+    right: 10%;
+    bottom: 25%;
 
 
 }
