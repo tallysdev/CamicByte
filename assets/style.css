@@ -9,7 +9,6 @@ body{
 
 /* definindo: tamanho, posição, tamanho da fonte, epaçamento e cor do menu superior */
 .navbar{
-    width: auto;
     height: 40px;
     padding: 15px;
     padding-top: 20px;
@@ -86,10 +85,7 @@ body{
 }
 
 #sobre{
-    position: relative;
-    display: block;
-    right: 0px;
-    float: right;
+    display: inline-block;
     background-color: rgba(0, 0, 0, 0);
     color:rgb(0, 94, 255);
     font-size: 25px;
@@ -103,12 +99,9 @@ body{
 }
 
 .sobre{
-    position: relative;
-    top: -10px;
     display: block;
     padding: 10px;
     padding-bottom: 20px;
-    float: right;
 }
 
 .sobre:hover{
@@ -136,12 +129,8 @@ body{
 }
 
 #contatos{
-    position: relative;
-    top: -10px;
-    display: block;
+    display: inline-block;
     padding: 10px;
-    padding-bottom: 20px;
-    float: right;
 }
 
 #cttBtn{
@@ -237,4 +226,16 @@ a:hover{
 p {
     color: #fff;
     text-align: center;
+}
+
+@media screen and (max-width: 720px){
+
+    body{
+        max-width: 100%;
+    }
+    
+    .navbar{
+        max-width: 100%;
+    }
+
 }
