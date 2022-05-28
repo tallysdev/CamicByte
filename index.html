@@ -1,74 +1,94 @@
-
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="./assets/style.css"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Akshar&display=swap" rel="stylesheet">
-        <title>Cam-Mic Byte</title>
-    </head>
-    <body>
-        <section class="navbar container-fluid row">
-            <!-- cirando definindo o barra de menu  -->
-            <nav id="navbar-nav">
-                <!-- imagem da logo -->
-                <img class="logo" src="./img/logo.png" alt="">
-                <!-- descrição do site -->
-                <div class="sobre col-2 offset-lg-8">    
-                    <button id="sobre">Sobre</button>
-                    <div id="sobre-content">
-                        <p class="sobre-text">O Camic consiste em um projeto de site simples com o intuito de testar a câmera e microfone do dispositivo. Por meio dos botôes abaixo você poderá ver sua imagem e/ou ouvir o áudio do seu microfone!</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>CamiC Byte</title>
+</head>
+<body>
+    
+    <!-- Elementos da Navbar -->
+
+    <nav class="navbar navbar-expand-md navbar-light fixed-top" style="background-color: #DDDDDD;">
+
+        <a href="https://www.linkedin.com/company/byte-seridó-jr/" class="navbar-brand"><img src="./img/logo.png" alt="Byte Seridó Jr" id="logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-content">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="contatosDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Contatos
+                    </a>
+                    <div class="dropdown-menu" style="background-color: #cccccc;" aria-labelledby="contatosDropdown">
+                        <a class="dropdown-item contato" href="https://www.linkedin.com/in/tallys-aureliano-dantas-dos-santos-91539821b/">Tallys Aureliano</a>
+                        <a class="dropdown-item contato" href="https://www.linkedin.com/in/thomas-almeida-2999891ba">Thomas Almeida</a>
+                        <a class="dropdown-item contato" href="https://www.linkedin.com/company/byte-seridó-jr/">Byte Seridó Jr.</a>
                     </div>
-                </div>
-                <!-- lista de contatos -->
-                <div id="contatos" class="col-2">
-                    <button id="cttBtn">Contatos</button>
-                    <div id="contatos-content">
-                        <a class="link-contatos" href="https://www.linkedin.com/in/tallys-aureliano-dantas-dos-santos-91539821b/">Tallys Aureliano</a>
-                        <a class="link-contatos" href="https://www.linkedin.com/in/thomas-almeida-2999891ba">Thomas Almeida</a>
-                        <a href="https://www.linkedin.com/company/byte-seridó-jr/" class="link-contatos">Byte Seridó Jr.</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="sobreDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Sobre
+                    </a>
+                    <div class="dropdown-menu p-3 text-muted mr-0" style="min-width: 20rem; background-color: #cccccc; color: #222222;" aria-labelledby="sobreDropdown">
+                        <p>
+                            O Camic consiste em um projeto de site simples com o intuito de testar a câmera e microfone do dispositivo.
+                        </p>
+                        <p class="mb-0">
+                            Por meio dos botôes abaixo você poderá ver sua imagem e/ou ouvir o áudio do seu microfone!
+                        </p>
                     </div>
+                </li>
+            </ul>
+            <span class="navbar-text" id="title" style="margin-right: 15px;">CamiC Byte</span>
+        </div>
+    </nav>
+
+    <!-- Fim da Navbar
+
+    Elementos do corpo principal -->
+
+    <section class="container-fluid text-center" style="background-color: rgb(0, 94, 255); padding-top: 3.5rem">
+        <div class="row p-5">
+            <div class="col-md-12 col-lg-6 justify-content-center">
+                <div class="block-cam-png col-12">
+                    <img class="icone" src="./img/camera.png" alt="icone webcam">
+                    <video class="block-camera" autoplay id="video"></video>
                 </div>
-            </nav>
-        </section>
-        <!-- definindo troco do site -->
-        <main id="main-content">
-            <!-- colocando icone de camera no espaço destinado para camera -->
-            <div class="block-cam-png">
-            </div>
-            <!-- definindo botao da esquerda -->
-            <div class="botoes-left">
-                <!-- definindo botao toggle -->
-                <div class="onoff">
-                    <input type="checkbox" class="toggle" id="onoff1">
-                    <label for="onoff1"></label>
+                <div class="botoes-left col-12">
+                    <div class="onoff">
+                        <input type="checkbox" class="toggle" id="onoffcam">
+                        <label for="onoffcam"></label>
+                    </div>
+                    <p id="estado">Desligado</p>
                 </div>
-                <!-- texto de ligado/desligado -->
-                <p id="estado">Desligado</p>
             </div>
-            <!-- divisoria das funçoes de video e audio -->
-            <div class="audio-video">
-                <video class="block-camera" autoplay id="video"></video>
-                <audio autoplay id="audio"></audio>
-            </div> 
-            <!-- defininfo espaço do audio -->
-            <div class="block-audio">    
-            </div>
-            <!-- definindo botao da direita -->
-            <div class="botoes-right">
-                <!-- definindo botao toggle -->
-                <div class="onoff">
-                    <input type="checkbox" class="toggle" id="onoffmic">
-                    <label for="onoffmic"></label>
+            <div class="col-md-12 col-lg-6 justify-content-center">
+                <div class="block-audio col-12">
+                    <img class="icone" src="./img/micFechado.png" alt="icone microfone">
+                    <audio autoplay id="audio"></audio>
                 </div>
-                <p id="estadomic">Desligado</p>
+                <div class="botoes-right col-12">
+                    <div class="onoff">
+                        <input type="checkbox" class="toggle" id="onoffmic">
+                        <label for="onoffmic"></label>
+                    </div>
+                    <p id="estadomic">Desligado</p>
+                </div>
             </div>
-        </main>
-        <script src="./assets/script.js"></script>        
-    </body>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./assets/scripts.js"></script>
+</body>
 </html>

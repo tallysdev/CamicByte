@@ -1,181 +1,66 @@
-/* defininfo fonte, margem, espaçamento e cor de de fundo do corpo do site */
-body{
-    font-family: 'Akshar', 'Roboto', 'Comic Sans MS', sans-serif;
-    margin: 0;
-    padding: 0;
-    justify-content: center;
-    background-color:  rgb(0, 94, 255);;
-}
 
-/* definindo: tamanho, posição, tamanho da fonte, epaçamento e cor do menu superior */
-.navbar{
-    height: 40px;
-    padding: 15px;
-    padding-top: 20px;
-    font-size: 25px;
-    font-weight: 600;
-    background-color: #DDDDDD;
-}
-/* definindo tamnho, tamanho, espaçamento da parte principal do body */
-#main-content{
+/* Estilizando elementos da navbar */
+
+#logo {
+    height: 50px;
     width: auto;
-    justify-content: center;
-    display: grid;
-    grid-template-areas: 
-        "botoes-left audio-video audio-video botoes-right";
+    margin-left: 10px;
 }
-/* definindo: tamanho, espaçamento e posição da camera */
-.block-camera {
-    position: absolute;
-    width: 500px;
-    height: 400px;
-    margin: 2%;
-    left: 5%;
-    bottom: 20%;
-} 
-/* definindo: icone da camera, posição, tamnho e epaçamento do icone da camera. */
-.block-cam-png {
-    background-image:url(../img/camera\ -\ Copia.png);
-    background-repeat: no-repeat;
-    position: absolute;
-    width: 500px;
-    height: 400px;
-    margin: 2%;
-    left: 15%;
-    bottom: 12%;
-}
-/* definindo tamanho, posição, espaçamento dos botões esquerdos */
-.botoes-left{
-    width: auto;
-    grid-area: botoes-left;
-    text-align: center;
-    margin-top: 50px;
-    position: absolute;
-    left: 20%;
-    bottom: 5%;
 
-
+#title{
+    font-size: 1.2rem;
+    font-weight: 550;
 }
-/* definindo icone de audio, sua posição e espaçmento e repetição */
+
+a{
+    font-weight: 450;
+    font-size: 1.2rem;
+    color: #222222;
+}
+
+p{
+    font-weight: 450;
+    font-size: 1.2rem;
+    color: #222222;
+}
+
+.contato{
+    font-size: 1.15rem;
+    font-weight: 450;
+}
+
+/* Estilizando blocos da câmera e do microfone */
+
 .block-audio {
-    background-image:url(../img/micFechado.png);
-    background-repeat: no-repeat;
-    width: 300px;
-    position: absolute;
-    height: 300px;
-    margin: 2%;
-    right: 10%;
-    bottom: 25%;
+    width: 500px;
+    height: 400px;
+} 
+
+.block-cam-png{
+    justify-content: center;
 }
 
-/* definindo tamanho, posição, espaçamento dos botões direitos */
-.botoes-right{
+.icone{
+    height: 250px;
     width: auto;
-    grid-area: botoes-right;
-    text-align: center;
-    position: absolute;
-    right: 20%;
-    bottom: 5%;    
-}
-/* definindo posiçao e tamanho do logo da byte no menu superior */
-.logo{
-    position: absolute;
-    top: 10px;
-    width: 80px;
+    margin-top: 2rem;
+    margin-bottom: 70px;
 }
 
-#sobre{
-    display: inline-block;
-    background-color: rgba(0, 0, 0, 0);
-    color:rgb(0, 94, 255);
-    font-size: 25px;
-    font-weight: 600;
-    border: none;
-    font-family: 'Akshar', 'Roboto', 'Comic Sans MS', sans-serif;
-}
-
-#sobre:hover{
-    color: rgb(191, 181, 0);
-}
-
-.sobre{
-    display: block;
-    padding: 10px;
-    padding-bottom: 20px;
-}
-
-.sobre:hover{
-    background-color: #CCCCCC;
-}
-
-.sobre:hover #sobre-content{
-    display: block;
-}
-
-#sobre-content{
+video{
     display: none;
-    position: absolute;
-    right: 0px;
-    width: 200px;
-    background-color: #CCCCCC;
-    padding: 10px;
-    z-index: 1;
-    margin-top: 35px;
-    width: 300px;
+    width: auto;
+    height: 330px;
+    margin-bottom: 20px;
+    margin-left: -2.3rem;
+    align-self: center;
 }
 
-#sobre-content p {
-    color: rgb(0, 94, 255);
+.botoes-right{
+    margin-top: -50px;
 }
 
-#contatos{
-    display: inline-block;
-    padding: 10px;
-}
-
-#cttBtn{
-    background-color: rgba(0, 0, 0, 0);
-    color:rgb(0, 94, 255);
-    font-size: 25px;
-    font-weight: 600;
-    border: none;
-    font-family: 'Akshar', 'Roboto', 'Comic Sans MS', sans-serif;
-}
-
-#cttBtn:hover{
-    color: rgb(191, 181, 0);
-}
-
-#contatos-content{
-    display: none;
-    position: absolute;
-    right: 0px;
-    width: 200px;
-    background-color: #CCCCCC;
-    padding: 15px;
-    z-index: 1;
-}
-
-#contatos:hover{
-    background-color: #CCCCCC;
-}
-
-#contatos:hover #contatos-content{
-    display: block;
-}
-
-a {
-    text-decoration: none;
-    padding: 15px;
-}
-
-a:link,:visited {
-    color: rgb(0, 94, 255);
-}
-
-a:hover{
-    color: rgb(191, 181, 0);
-}
+/* Estilizando botão toggle */
 
 .onoff input.toggle {
     display: none;
@@ -223,19 +108,43 @@ a:hover{
     box-shadow: inset 0 0 0 3px rgb(0, 94, 255), 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-p {
-    color: #fff;
+#estado, #estadomic{
+        color: #fff;
+        text-align: center;
+        font-weight: 450;
+}
+
+/*  Ajustando margem do corpo */
+
+body{
+    background-color: rgb(0, 94, 255);
+}
+
+section{
+    height: 100%;
+}
+
+div{
+    justify-content: center;
     text-align: center;
 }
 
-@media screen and (max-width: 720px){
+/* Ajustando itens responsivos */
 
-    body{
-        max-width: 100%;
-    }
-    
-    .navbar{
-        max-width: 100%;
+@media only screen and (min-width: 768px) {
+    .dropdown:hover .dropdown-menu{
+        display: block;
+        margin-top: 0;
     }
 
+    video{
+        margin-left: 3rem;
+    }
+}
+
+@media screen and (max-width: 576px){
+    video{
+        height: 250px;
+        width: auto;
+    }
 }
