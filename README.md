@@ -3,8 +3,9 @@
 </h1>
 
 #### O projeto consiste em um site simples para teste da Câmera e Microfone do dispositivo.
+<hr>
 
-###Docummentos
+<p>Docummentos</p>
 
 | Documento              | Acesso                     |
 |------------------------|----------------------------|
