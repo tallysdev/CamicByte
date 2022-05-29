@@ -6,4 +6,4 @@
 
 | Documento              | Acesso                     |
 |------------------------|----------------------------|
-| Documento de Visão     | [Clique Aqui]()            |
+| Documento de Visão     | [Clique Aqui](doc-visao.md)|
