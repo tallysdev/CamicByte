@@ -16,3 +16,4 @@
 | Documento              | Acesso                     |
 |------------------------|----------------------------|
 | Documento de Visão     | [Clique Aqui](docs/doc-visao.md)|
+| Apresentação do projeto| [Clique Aqui](docs/apresentacao.pptx)|
